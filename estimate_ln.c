@@ -1,24 +1,18 @@
 /******************************************************************************
-Title : a2p1.c
+Title : estimate_ln.c
 Author : Steven Rojas
 Created on : March 2, 2024
 Description : Estimates natural log of input with rectangle method
 Purpose : Finds estimate of natural log of given input and error from actual value
 Usage : Input number
-Build with : gcc -o drawing_demo_03 draw_stars.c \
-‘pkg-config --cflags --libs gtk+-2.0‘
+Build with : mpicc -Wall -g -o prog estimate_ln.c -lm \
 Modifications:
 ******************************************************************************/
-/*integral 0 to x of 1/t
-X is inputted number
-*/
+
 
 #include <mpi/mpi.h>
 #include <math.h>
-
 #include <stdio.h>
-// #include "../../../../../../../usr/lib/x86_64-linux-gnu/openmpi/include/mpi.h"
-//  math h for fabs(), abs value of real ln error
 #define ROOT 0
 
 /*
